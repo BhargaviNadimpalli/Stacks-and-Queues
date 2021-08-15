@@ -26,7 +26,7 @@ namespace StacksAndQueues
             this.top = node;
             Console.WriteLine("{0} is pushed to stack ", value);
         }
-         internal void Display()
+        internal void Display()
         {
             if (this.top == null)
                 Console.WriteLine("list is empty.");
@@ -40,5 +40,51 @@ namespace StacksAndQueues
                 }
             }
         }
+        internal void Peek()
+        {
+            Node temp = top;
+            if (temp == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in top of the stack", temp.data);
+
+        }
+
+
+        internal void peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in top of stack", this.top.data);
+
+        }
+    
+
+        internal void pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("The value popped is : {0}", this.top.data);
+            this.top = this.top.next;
+        }
+
+        internal void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                peek();
+                pop();
+            }
+        }
+
     }
 }
+
