@@ -14,6 +14,11 @@ namespace StacksAndQueues
             list.Display();
 
 
+            list.Dequeue();
+            list.Display();
+            list.IsEmpty();
+
+
 
         }
     }

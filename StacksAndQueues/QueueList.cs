@@ -30,6 +30,24 @@ namespace StacksAndQueues
             Console.WriteLine("{0} inserted into Queue,", node.data);
 
         }
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("The value popped is : {0}", this.head.data);
+            this.head = this.head.next;
+        }
+        
+        internal void IsEmpty()
+        {
+            while (this.head != null)
+            {
+               Dequeue();
+            }
+        }
         internal void Display()
         {
             Node temp = head;
@@ -39,6 +57,5 @@ namespace StacksAndQueues
                 temp = temp.next;
             }
         }
-
     }
 }
