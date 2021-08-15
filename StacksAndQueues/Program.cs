@@ -7,15 +7,12 @@ namespace StacksAndQueues
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to stack and queues progrmas");
-            Stacklist list = new Stacklist();
-            list.push(70);
-            list.push(30);
-            list.push(56);
+            QueueList list = new QueueList();
+            list.Enqueue(56);
+            list.Enqueue(30);
+            list.Enqueue(70);
             list.Display();
-            list.Peek();
-            list.pop();
-            list.IsEmpty();
-            list.Peek();
+
 
 
         }
